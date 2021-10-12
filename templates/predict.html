@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div style="color:blue">
+        <form action="{{ url_for('predict')}}" method="post">
+            <h2>Predictive analysis</h2>
+            <h3>Please select Gender</h3><select name="gender_male" id="gender" required="required">
+		<option value="M">Male</option>
+		<option value="F">Female</option>
+		</select>
+            <h3>What is the SSC % ?</h3><br><input id="second" name="ssc_p" required="required">
+	    <h3>Please select SSC Board</h3><select name="third" id="ssc_b" required="required">
+		<option value="Central">Central</option>
+		<option value="Others">Others</option>
+		</select>
+            <h3>What is the HSC % ?</h3><br><input id="fourth" name="hsc_p" required="required">
+	    <h3>Please select HSC Board</h3><select name="fifth" id="hsc_b" required="required">
+		<option value="Central">Central</option>
+		<option value="Others">Others</option>
+		</select>
+	    <h3>Please select HSC Stream</h3><select name="six" id="hsc_s" required="required">
+		<option value="Science">Science</option>
+		<option value="Commerce">Commerce</option>
+		<option value="Arts">Arts</option>
+		</select>
+	    <h3>What is the Degree % ?</h3><br><input id="seven" name="degree_p" required="required">
+	    <h3>Please select Degree tech</h3><select name="eight" id="degree_t" required="required">
+		<option value="Sci&Tech">Sci&Tech</option>
+		<option value="Comm&Mgmt">Comm&Mgmt</option>
+		<option value="Others">Others</option>
+             </select>
+	    <h3>Do you have any work experience</h3><select name="workex" id="workex" required="required">
+		<option value="Yes">Yes</option>
+		<option value="No">No</option></select>
+	    <h3>What is the ETEST % ?</h3><br><input id="etest" name="etest" required="required">
+	    <h3>What is your specialisation in ?</h3><select name="specialisation" id="specialisation" required="required">
+		<option value="Mkt&HR">Mkt&HR</option>
+		<option value="Mkt&Fin">Mkt&Fin</option>
+		</select>
+	    <h3>What is your MBA % ?</h3><br><input id="mba_p" name="mba_p" required="required">
+            <br><br><button id="sub" type="submit ">Placement Prediction</button>
+            <br>
+
+
+
+
+        </form>
+
+
+
+        <br><br><h3>{{ prediction_text }}<h3>
+    </div>
+
+
+
+
+    <style>
+        body {
+            background-color: lightslategray;
+            text-align: center;
+            padding: 0px;
+        }
+        
+        #gender_male {
+            font-size: 18px;
+            width: 100px;
+            height: 23px;
+            top: 23px;
+        }
+        
+        #box {
+            border-radius: 60px;
+            border-color: 45px;
+            border-style: solid;
+            font-family: cursive;
+            text-align: center;
+            background-color: rgb(168, 131, 61);
+            font-size: medium;
+            position: absolute;
+            width: 700px;
+            bottom: 9%;
+            height: 850px;
+            right: 30%;
+            padding: 0px;
+            margin: 0px;
+            font-size: 14px;
+        }
+        
+        #gender_male {
+            width: 83px;
+            height: 43px;
+            text-align: center;
+            border-radius: 14px;
+            font-size: 20px;
+        }
+        
+        #gender_male:hover {
+            background-color: coral;
+        }
+        
+        #second {
+            width: 99px;
+            height: 43px;
+            text-align: center;
+            border-radius: 14px;
+            font-size: 18px;
+        }
+        
+        #second:hover {
+            background-color: coral;
+        }
+        
+        #third {
+            width: 99px;
+            height: 43px;
+            text-align: center;
+            border-radius: 14px;
+            font-size: 18px;
+        }
+        
+        #third:hover {
+            background-color: coral;
+        }
+        
+        #fourth {
+            width: 120px;
+            height: 43px;
+            text-align: center;
+            border-radius: 14px;
+            font-size: 18px;
+        }
+        
+        #fourth:hover {
+            background-color: darkcyan;
+        }
+        
+        #fifth {
+            border-radius: 14px;
+            height: 25px;
+            font-size: 20px;
+            text-align: center;
+        }
+        
+        #six {
+            border-radius: 14px;
+            height: 25px;
+            font-size: 20px;
+            text-align: center;
+        }
+        
+        #seven {
+            border-radius: 14px;
+            height: 25px;
+            font-size: 20px;
+            text-align: center;
+        }
+        
+        #eight {
+            border-radius: 14px;
+            height: 25px;
+            font-size: 20px;
+            text-align: center;
+        }
+	#workex {
+            border-radius: 14px;
+            height: 25px;
+            font-size: 20px;
+            text-align: center;
+        }
+	#specialisation {
+            border-radius: 14px;
+            height: 25px;
+            font-size: 20px;
+            text-align: center;
+        }
+	#mba_p {
+            border-radius: 14px;
+            height: 25px;
+            font-size: 20px;
+            text-align: center;
+        }
+    </style>
+</body>
+
+</html>
