@@ -10,29 +10,29 @@
 <body>
 
     <div style="color:blue">
-        <form action="{{ url_for('predict')}}" method="post">
+        <form class="form-control" id="formid" name="formname" action="{{ url_for('predict')}}" method="post">
             <h2>Predictive analysis</h2>
             <h3>Please select Gender</h3><select name="gender_male" id="gender" required="required">
 		<option value="M">Male</option>
 		<option value="F">Female</option>
 		</select>
             <h3>What is the SSC % ?</h3><br><input id="second" name="ssc_p" required="required">
-	    <h3>Please select SSC Board</h3><select name="third" id="ssc_b" required="required">
+	    <h3>Please select SSC Board</h3><select name="ssc_b" id="ssc_b" required="required">
 		<option value="Central">Central</option>
 		<option value="Others">Others</option>
 		</select>
-            <h3>What is the HSC % ?</h3><br><input id="fourth" name="hsc_p" required="required">
-	    <h3>Please select HSC Board</h3><select name="fifth" id="hsc_b" required="required">
+            <h3>What is the HSC % ?</h3><br><input id="hsc_p" name="hsc_p" required="required">
+	    <h3>Please select HSC Board</h3><select name="hsc_b" id="hsc_b" required="required">
 		<option value="Central">Central</option>
 		<option value="Others">Others</option>
 		</select>
-	    <h3>Please select HSC Stream</h3><select name="six" id="hsc_s" required="required">
+	    <h3>Please select HSC Stream</h3><select name="hsc_s" id="hsc_s" required="required">
 		<option value="Science">Science</option>
 		<option value="Commerce">Commerce</option>
 		<option value="Arts">Arts</option>
 		</select>
 	    <h3>What is the Degree % ?</h3><br><input id="seven" name="degree_p" required="required">
-	    <h3>Please select Degree tech</h3><select name="eight" id="degree_t" required="required">
+	    <h3>Please select Degree tech</h3><select name="degree_t" id="degree_t" required="required">
 		<option value="Sci&Tech">Sci&Tech</option>
 		<option value="Comm&Mgmt">Comm&Mgmt</option>
 		<option value="Others">Others</option>
