@@ -10,7 +10,7 @@
 <body>
 
     <div style="color:blue">
-        <form class="form-control" id="formid" name="formname" action="{{ url_for('predict')}}" method="post">
+        <form action="{{ url_for('predict')}}" method="post">
             <h2>Predictive analysis</h2>
             <h3>Please select Gender</h3><select name="gender_male" id="gender" required="required">
 		<option value="M">Male</option>
