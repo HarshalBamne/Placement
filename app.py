@@ -18,9 +18,7 @@ from sklearn.preprocessing import LabelEncoder
 app = Flask(__name__)
 clf = pickle.load(open('random_forest_classifier_placed_model.pkl', 'rb'))
 scaled = pickle.load(open('scalers.pkl','rb'))
-@app.route('/',methods=['GET'])
-def Home():
-    return render_template('predict.html')
+
 
 
 scaler = StandardScaler()
